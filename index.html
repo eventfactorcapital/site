@@ -14,17 +14,16 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background-color: #2F3E4A;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 40px 20px;
-            position: relative;
-            overflow-x: hidden;
-            overflow-y: auto;
-            width: 100%;
-            max-width: 100vw;
+            position: fixed;
+            overflow: hidden;
+            width: 100vw;
+            margin: 0;
         }
 
         /* Geometric accent - top left */
@@ -56,8 +55,10 @@
         }
 
         html {
-            overflow-x: hidden;
+            overflow: hidden;
             width: 100%;
+            height: 100%;
+            position: fixed;
         }
 
         .container {
@@ -119,22 +120,37 @@
 
         @media (max-width: 768px) {
             body {
-                padding: 30px 15px;
+                padding: 20px 10px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            .container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
 
             .logo {
-                width: 95%;
-                max-width: 95vw;
+                width: 90%;
+                max-width: 90vw;
             }
 
             .logo-container {
-                margin-bottom: 60px;
+                margin-bottom: 40px;
+                flex-shrink: 0;
             }
 
             .contact-link {
                 padding: 14px 30px;
-                font-size: 16px;
+                font-size: 15px;
                 white-space: nowrap;
+                flex-shrink: 0;
             }
         }
     </style>
