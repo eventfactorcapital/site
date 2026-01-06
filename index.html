@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Factor Capital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #2F3E4A;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Geometric accent - top left */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 40%;
+            height: 50%;
+            background: #475B6B;
+            opacity: 0.3;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+            z-index: 0;
+        }
+
+        /* Geometric accent - bottom right */
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 35%;
+            height: 45%;
+            background: #D87840;
+            opacity: 0.15;
+            clip-path: polygon(100% 100%, 0 100%, 100% 0);
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .logo-container {
+            margin-bottom: 120px;
+        }
+
+        .logo {
+            max-width: 800px;
+            width: 85%;
+            height: auto;
+        }
+
+        .contact-link {
+            display: inline-block;
+            background: #D87840;
+            color: #F8F7F5;
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: #A35E2F;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(216, 120, 64, 0.4);
+        }
+
+        .contact-link:active {
+            transform: translateY(0);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 90%;
+            }
+
+            .logo-container {
+                margin-bottom: 80px;
+            }
+
+            .contact-link {
+                padding: 16px 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="efc_logo_dark.png" alt="Event Factor Capital" class="logo">
+        </div>
+
+        <a href="mailto:efc@eventfactorcapital.com" class="contact-link">Contact Us</a>
+    </div>
+</body>
+</html>
